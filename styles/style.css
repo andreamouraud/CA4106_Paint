@@ -100,7 +100,8 @@ button
 .action-bar {
 	background-color: #eaeaea;
 	margin-right: 10px;
-  display: block;
+	display: block;
+	overflow: hidden;
   width: 250px;
   height: 350px;
   padding: 1em;
@@ -116,7 +117,7 @@ button
 .action-bar li {
 	list-style: none;
 	word-wrap: break-word;
-  background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgba(0, 0, 0, 0.05);
   padding: 10px 15px 10px 25px;
   border: 1px solid #CCC;
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
@@ -129,7 +130,8 @@ button
 
 .action-bar ul {
 	margin: 0 auto;
-  padding: 0;
+	padding: 0;
+	position:absolute;
   max-height: 390px;
   overflow-y: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);

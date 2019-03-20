@@ -29,9 +29,7 @@ document.getElementById('current').style.backgroundColor = 'black';
 function createAction(object) {
     var li = document.createElement("li");
     li.setAttribute('style', "background-image: linear-gradient(90deg, " + object.object.color + " 10px, #EEE 10px, #EEE 11px, transparent 11px);")
-    li.setAttribute('onclick', 'changeName(' + object.id + ')');
     li.setAttribute('id',object.id);
-    
 
     var up = document.createElement("button");
     up.setAttribute('id','up');
@@ -44,6 +42,12 @@ function createAction(object) {
     down.setAttribute('style', "background-image: url(images/down.png)");
     down.setAttribute('onclick', 'downObject('+ object.id + ')')
     li.appendChild(down);
+    
+    var edit = document.createElement("button");
+    edit.setAttribute('id','down');
+    edit.setAttribute('style', "background-image: url(images/edit.png)");
+    edit.setAttribute('onclick', 'changeName('+ object.id + ')');
+    li.appendChild(edit);
     
     var remove = document.createElement("button");
     remove.setAttribute('id','remove');
@@ -170,6 +174,7 @@ function changeBrushSize(size) {
 function fillCanvas() { 
     currentColor = document.getElementById('current').style.backgroundColor;
     objects.push({id:currentid++, object:new Rectangle(0, 0, canvas.width, canvas.height , currentColor, currentSize, true)});
+    addAction(objects[currentid - 1]);
     drawObjects();
 }
 
