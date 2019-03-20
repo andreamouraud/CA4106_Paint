@@ -178,7 +178,7 @@ function changeBrushSize(size) {
 function fillCanvas() { 
     currentColor = document.getElementById('current').style.backgroundColor;
     objects.push({id:currentid++, object:new Rectangle(0, 0, canvas.width, canvas.height , currentColor, currentSize, true)});
-    addAction(objects[currentid - 1]);
+    addAction(objects[objects.length - 1]);
     drawObjects();
 }
 
