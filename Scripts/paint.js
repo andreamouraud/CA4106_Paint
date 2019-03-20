@@ -170,5 +170,8 @@ function changeObject(object) {
         currentColor = 'white';
         document.getElementById('colors').style.display = 'none';
     }
+    else if (object === 'circle') {
+        currentObject = Circle;
+    }
     currentObject.open(canvas);
 }
