@@ -17,7 +17,7 @@
     <button id="eraserObject" style="background-image: url(images/eraser.png)" onclick="changeObject('eraser')"></button>
     <button id="circleObject" style="background-image: url(images/circle.png)" onclick="changeObject('circle')"></button>
     <button id="saveFile" style="background-image: url(images/save.png)" onclick="saveFile()"></button>
-    <button id="openFile" style="background-image: url(images/open.png)" onclick="openFile()"></button>
+    <button id="openFile" style="background-image: url(images/open.png)" onclick="document.getElementById('imageLoader').click()"></button>
   </div>    
         <canvas id="canvas" width="1280" height="720"></canvas>
 
@@ -48,9 +48,12 @@
           </div>
       </div>
     
+      <input type="file" id="imageLoader" name="imageLoader"/>
+
       <script src="Scripts/Objects/Rectangle.js"></script>
       <script src="Scripts/Objects/Line.js"></script>
       <script src="Scripts/Objects/Circle.js"></script>
+      <script src="Scripts/Objects/ImageObject.js"></script>
       <script src="Scripts/paint.js"></script>
   </body>
 </html>

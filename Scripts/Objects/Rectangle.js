@@ -1,7 +1,4 @@
 class Rectangle {
-    static posA = [];
-    static posB = [];
-    name = 'Rectangle'
 
     constructor(startX, startY, endX, endY, color, size, fill) {
         this.startX = startX;
@@ -11,6 +8,7 @@ class Rectangle {
         this.color = color;
         this.size = size;
         this.fill = fill;
+        this.name = "Rectangle";
     }
 
     static open(canvas) {

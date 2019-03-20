@@ -22,6 +22,12 @@ button
     border:0;
 }
 
+
+button:hover 
+{
+	opacity: 0.5;
+}
+
 #color-bar
 {
 		height: 55px;
@@ -94,8 +100,6 @@ button
 		float: left;
 		display: block;
 }
-
-#tools button:hover {opacity: 0.5;}
 
 .action-bar {
 	background-color: #eaeaea;

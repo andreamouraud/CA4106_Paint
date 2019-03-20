@@ -8,7 +8,11 @@ var reverted = [];
 var currentSize = 5;
 var currentObject = Line;
 var eraser = false;
+var imageLoader = document.getElementById('imageLoader');
+var posA = [];
+var posB = [];
 
+imageLoader.addEventListener('change', openFile);
 currentObject.open(canvas);
 
 function drawObjects() {
@@ -199,4 +203,44 @@ function changeObject(object) {
         currentObject = Circle;
     }
     currentObject.open(canvas);
+}
+
+function saveFile() {
+    console.log('a')
+  var lnk = document.createElement('a'), e;
+
+  /// the key here is to set the download attribute of the a tag
+  lnk.download = 'image.png';
+  lnk.href = canvas.toDataURL("image/png;base64");
+  if (document.createEvent) {
+    e = document.createEvent("MouseEvents");
+    e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    lnk.dispatchEvent(e);
+  } else if (lnk.fireEvent) {
+    lnk.fireEvent("onclick");
+  }
+}
+
+function openFile(e) {
+    var reader = new FileReader();
+    reader.onload = function(e){
+        var img = new Image();
+        img.onload = function(e) {
+            newWidth = img.naturalWidth;
+            newHeight = img.naturalHeight;
+            ratio = img.naturalWidth / img.naturalHeight;
+            if(newWidth > img.naturalHeight && newWidth > 1280) {
+                newWidth = 1280 / ratio;
+            }
+            if(newWidth >= newHeight || newHeight > newWidth && newHeight > 720) {
+                newHeight = 720;
+                newWidth = 720 * ratio;
+            }
+            objects.push({id: currentid++, object:new ImageObject(img, newWidth, newHeight)});
+            addAction(objects[objects.length - 1]);
+            drawObjects();
+        }
+        img.src = e.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]); 
 }

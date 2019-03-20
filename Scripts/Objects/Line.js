@@ -1,11 +1,11 @@
 class Line {
-    name = 'Line';
     constructor(startX, startY, color, size) {
         this.startX = startX;
         this.startY = startY;
         this.path = []
         this.color = color;
         this.size = size;
+        this.name = "Line";
     }
 
     addPoint(pointX, pointY) {
