@@ -16,11 +16,13 @@ class Line {
         console.log('open line')
         canvas.addEventListener('mousemove', this.mouseMoveListener);
         canvas.addEventListener('mousedown', this.mouseDownListener);
+        canvas.addEventListener('mouseup', this.mouseUpListener);
     }
 
     static close(canvas) {
         canvas.removeEventListener('mousemove', this.mouseMoveListener, false);
         canvas.removeEventListener('mousedown', this.mouseDownListener, false);
+        canvas.removeEventListener('mouseup', this.mouseUpListener);
     }
 
     static mouseDownListener(e) {
@@ -42,6 +44,14 @@ class Line {
         {
             objects[objects.length -1].object.addPoint(pos.posX, pos.posY);
             drawObjects();
+        }
+    }
+
+    static mouseUpListener(e) {
+        down = false;
+        console.log(objects[objects.length - 1].object.path)
+        if (objects[objects.length - 1].object.path.length === 0) {
+            removeObject(currentid - 1)
         }
     }
 

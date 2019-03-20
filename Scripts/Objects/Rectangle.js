@@ -49,6 +49,9 @@ class Rectangle {
         e.preventDefault();
         this.locB = getMousePosition(e);
         var rectangle = new Rectangle(this.posA.posX, this.posA.posY, this.posB.posX, this.posB.posY, currentColor, currentSize, false);
+        if (rectangle.startX == rectangle.endX && rectangle.startY == rectangle.endY) {
+            return;
+        }
         var object = {id:currentid++, object:rectangle}
         objects.push(object);
         addAction(object);

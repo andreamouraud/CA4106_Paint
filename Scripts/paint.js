@@ -57,8 +57,6 @@ function addAction(object) {
     ul.insertBefore(li, ul.firstChild);
 }
 
-canvas.addEventListener('mouseup', function() { down = false; });
-
 var size =  document.getElementById('brushSize');
 size.addEventListener("change",changeBrushSize);
 size.addEventListener("mousemove",changeBrushSize);
