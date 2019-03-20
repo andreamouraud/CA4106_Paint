@@ -14,6 +14,7 @@ var posB = [];
 
 imageLoader.addEventListener('change', openFile);
 currentObject.open(canvas);
+context.lineCap='round'; 
 
 function drawObjects() {
     console.log(objects);
@@ -189,6 +190,9 @@ function changeObject(object) {
     currentObject.close(canvas);
     if (object === 'line') {
         currentObject = Line;
+    }
+    if (object === 'straightline') {
+        currentObject = StraightLine;
     }
     else if (object === 'rectangle') {
         currentObject = Rectangle;

@@ -18,6 +18,7 @@
     <button id="circleObject" style="background-image: url(images/circle.png)" onclick="changeObject('circle')"></button>
     <button id="exportImage" style="background-image: url(images/export.png)" onclick="exportImage()"></button>
     <button id="importImage" style="background-image: url(images/import.png)" onclick="document.getElementById('imageLoader').click()"></button>
+    <button id="straightlineObject" style="background-image: url(images/line.png)" onclick="changeObject('straightline')"></button>
   </div>    
         <canvas id="canvas" width="1280" height="720"></canvas>
 
@@ -44,7 +45,7 @@
                     <button id = "aqua"  onclick="changeColor('aqua')"></button>
                     <button id = "pink"  onclick="changeColor('pink')"></button>
                     <button id = "white"  onclick="changeColor('white')"></button>
-                </div>      
+                </div>
           </div>
       </div>
     
@@ -52,6 +53,7 @@
 
       <script src="Scripts/Objects/Rectangle.js"></script>
       <script src="Scripts/Objects/Line.js"></script>
+      <script src="Scripts/Objects/StraightLine.js"></script>
       <script src="Scripts/Objects/Circle.js"></script>
       <script src="Scripts/Objects/ImageObject.js"></script>
       <script src="Scripts/paint.js"></script>
