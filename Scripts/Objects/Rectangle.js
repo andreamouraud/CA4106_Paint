@@ -1,6 +1,7 @@
 class Rectangle {
     static posA = [];
     static posB = [];
+    name = 'Rectangle'
 
     constructor(startX, startY, endX, endY, color, size, fill) {
         this.startX = startX;

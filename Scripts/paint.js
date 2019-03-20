@@ -53,7 +53,7 @@ function addAction(object) {
     remove.setAttribute('onclick', 'removeObject('+ object.id + ')')
     li.appendChild(remove);
 
-    li.appendChild(document.createTextNode('Line'));
+    li.appendChild(document.createTextNode(object.object.name));
     ul.insertBefore(li, ul.firstChild);
 }
 

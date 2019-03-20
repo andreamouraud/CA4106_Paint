@@ -1,4 +1,5 @@
 class Line {
+    name = 'Line';
     constructor(startX, startY, color, size) {
         this.startX = startX;
         this.startY = startY;
