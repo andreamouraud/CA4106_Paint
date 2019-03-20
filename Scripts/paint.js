@@ -26,12 +26,10 @@ function getMousePosition(e) {
 
 document.getElementById('current').style.backgroundColor = 'black';
 
-function addAction(object) {
-    var div = document.getElementById('action-bar');
-
-    var ul = document.getElementById("dynamic-list");
+function createAction(object) {
     var li = document.createElement("li");
     li.setAttribute('style', "background-image: linear-gradient(90deg, " + object.object.color + " 10px, #EEE 10px, #EEE 11px, transparent 11px);")
+    li.setAttribute('onclick', 'changeName(' + object.id + ')');
     li.setAttribute('id',object.id);
     
 
@@ -54,6 +52,14 @@ function addAction(object) {
     li.appendChild(remove);
 
     li.appendChild(document.createTextNode(object.object.name));
+    return li;
+}
+
+function addAction(object) {
+    var div = document.getElementById('action-bar');
+
+    var ul = document.getElementById("dynamic-list");
+    var li = createAction(object);
     ul.insertBefore(li, ul.firstChild);
 }
 
@@ -107,6 +113,20 @@ function upObject(id) {
         }
     }
     drawObjects();
+}
+
+function changeName(id) {
+    var item = document.getElementById(id);
+    var input = prompt ("Enter new name", item.textContent)
+    if (input != null && input != "") {
+        for(var i = 0; i < objects.length; i++) {
+            if (objects[i].id === id) {
+                objects[i].object.name = input;
+                item.replaceWith(createAction(objects[i]))
+                break;
+            }
+        }
+    }
 }
 
 function removeObject(id) {
