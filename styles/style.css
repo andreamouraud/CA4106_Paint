@@ -1,0 +1,169 @@
+*{margin:0; padding: 0}
+
+
+section
+{
+    padding-top: 1px;
+		padding-bottom: 1px;
+}
+
+canvas
+{
+		position: absolute;
+		border: 1px solid black;
+		margin-left: 60px;
+		margin-top: 3px;
+		background-color: white;
+}
+
+button
+{
+    outline: 0;
+    border:0;
+}
+
+#color-bar
+{
+		height: 55px;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		background-color: #c0c0c0;
+		overflow-x: hidden;
+		padding-top: 5px;
+		border-top:1px solid white;
+}
+
+#colors
+{
+		margin-left:60px;
+		width:140px;
+}
+
+#current-color
+{
+	margin-left:5px;
+}
+
+#current-color button
+{
+    width: 45px;
+    height: 45px;
+		margin-top: 5px;
+		margin-left: 2px;
+    float:left;
+    border: 1px solid black;
+}
+
+#bottom-bar
+{
+	width: 100%;
+	height: 30px;
+	border:1px solid white;
+}
+
+#colors button
+{
+    width: 20px;
+    height: 20px;
+		margin-top: 5px;
+		margin-left: 2px;
+    float:left;
+    border: 1px solid black;
+}
+
+#tools
+{
+		height: 100%;
+		width: 56px;
+		position: fixed;
+		display: block;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #c0c0c0;
+		overflow-x: hidden;
+		padding-top: 20px;
+		border-right:1px solid white;
+}
+
+#tools button,input
+{
+		margin-left: 2px;
+		margin-bottom: 2px;
+    width: 25px;
+    height: 25px;
+    background: white;
+    color: white;
+    cursor:pointer;
+		float: left;
+		display: block;
+}
+
+#tools button:hover {opacity: 0.5;}
+
+.action-bar {
+	background-color: #eaeaea;
+	margin-right: 10px;
+  display: block;
+  width: 250px;
+  height: 350px;
+  padding: 1em;
+  overflow-y: scroll;
+	text-align: left;
+	bottom: 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 80px;
+}
+
+.action-bar li {
+	list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.action-bar ul {
+	margin: 0 auto;
+  padding: 0;
+  max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 5px 0 5px;
+  border-left: none;
+  border-right: none;
+}
+
+.action-bar button {
+	width: 25px;
+	height: 25px;
+	margin-right: 3px;
+	border: 1px solid black;
+	right:0;
+}
+
+
+#black {background: black;}
+#grey {background: grey;}
+#red {background: red;}
+#orange {background: orange;}
+#yellow {background: yellow;}
+#green {background: green;}
+#blue {background: blue;}
+#aqua {background: aqua;}
+#pink {background: pink;}
+#white {background: white;}
+#crimson{background: crimson;}
+#purple{background: purple;}
+#yellowgreen{background: yellowgreen}
+#brushSize{ width: 100%;}

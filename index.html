@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>CA485 Paint Application</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body style="background-color: #7b7b7b;"> 
+  <div id="tools">
+    <input type="range" id="brushSize" min="0" max="100" value="10"> 
+    <button id="clearCanvas" style="background-image: url(images/clear.png)" onclick="clearCanvas()"></button>
+    <button id="fillCanvas" style="background-image: url(images/fill.png)" onclick="fillCanvas()"></button>
+    <button id="lineObject" style="background-image: url(images/line.png)" onclick="changeObject('line')"></button>
+    <button id="rectangleObject" style="background-image: url(images/rectangle.png)" onclick="changeObject('rectangle')"></button>
+    <button id="revert" style="background-image: url(images/revert.png)" onclick="revert()"></button>
+    <button id="redo" style="background-image: url(images/redo.png)" onclick="redo()"></button>
+    <button id="eraserObject" style="background-image: url(images/eraser.png)" onclick="changeObject('eraser')"></button>
+    <button id="circleObject" style="background-image: url(images/circle.png)" onclick="changeObject('circle')"></button>
+    <button id="saveFile" style="background-image: url(images/save.png)" onclick="saveFile()"></button>
+    <button id="openFile" style="background-image: url(images/open.png)" onclick="openFile()"></button>
+  </div>    
+        <canvas id="canvas" width="1280" height="720"></canvas>
+
+        <div class="action-bar" id="action-bar">
+          Layers
+            <ul id="dynamic-list"></ul>
+        </div>
+
+        <div id="buttom-bar">
+          <div id="color-bar">
+              <div id="current-color">
+                  <button id = "current"  onclick="changeColor('black')"></button>
+              </div>
+                <div id= "colors">
+                    <button id = "black"  onclick="changeColor('black')"></button>
+                    <button id = "grey"  onclick="changeColor('grey')"></button>
+                    <button id = "purple"  onclick="changeColor('purple')"></button>
+                    <button id = "green"  onclick="changeColor('green')"></button>
+                    <button id = "blue"  onclick="changeColor('blue')"></button>
+                    <button id = "crimson"  onclick="changeColor('crimson')"></button>
+                    <button id = "orange"  onclick="changeColor('orange')"></button>
+                    <button id = "yellow"  onclick="changeColor('yellow')"></button>
+                    <button id = "yellowgreen"  onclick="changeColor('yellowgreen')"></button>
+                    <button id = "aqua"  onclick="changeColor('aqua')"></button>
+                    <button id = "pink"  onclick="changeColor('pink')"></button>
+                    <button id = "white"  onclick="changeColor('white')"></button>
+                </div>      
+          </div>
+      </div>
+    
+      <script src="Scripts/Objects/Rectangle.js"></script>
+      <script src="Scripts/Objects/Line.js"></script>
+      <script src="Scripts/paint.js"></script>
+  </body>
+</html>
