@@ -57,6 +57,7 @@ As the only browser used during the development phase was Chrome, when the appli
 We were surprised as none of them but Chrome would work. After some research, we found out that Chrome was using a Javascript version that has not been released yet. Every other browser was still using the latest version and was waiting the next one to be officially released before using it but Chrome did not. So we came up with this major problem that has been solved after the testing phase.
 
 *An example of one of the issues:* 
+
 Before
 ```js
 class Rectangle {
