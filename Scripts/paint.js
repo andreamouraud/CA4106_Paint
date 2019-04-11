@@ -39,24 +39,28 @@ function createAction(object) {
     var up = document.createElement("button");
     up.setAttribute('id','up');
     up.setAttribute('style', "background-image: url(images/up.png)");
+    up.setAttribute('title', "Move up");
     up.setAttribute('onclick', 'upObject('+ object.id + ')')
     li.appendChild(up);
 
     var down = document.createElement("button");
     down.setAttribute('id','down');
     down.setAttribute('style', "background-image: url(images/down.png)");
+    down.setAttribute('title', "Move down");
     down.setAttribute('onclick', 'downObject('+ object.id + ')')
     li.appendChild(down);
     
     var edit = document.createElement("button");
     edit.setAttribute('id','down');
-    edit.setAttribute('style', "background-image: url(images/edit.png)");
+    edit.setAttribute('style', "background-image: url(images/edit.png)");    
+    edit.setAttribute('title', "Rename");
     edit.setAttribute('onclick', 'changeName('+ object.id + ')');
     li.appendChild(edit);
     
     var remove = document.createElement("button");
     remove.setAttribute('id','remove');
     remove.setAttribute('style', "background-image: url(images/remove.png)");
+    remove.setAttribute('title', "Remove");
     remove.setAttribute('onclick', 'removeObject('+ object.id + ')')
     li.appendChild(remove);
 
@@ -191,8 +195,11 @@ function changeObject(object) {
     if (object === 'line') {
         currentObject = Line;
     }
-    if (object === 'straightline') {
+    else if (object === 'straightline') {
         currentObject = StraightLine;
+    }
+    else if (object === 'floodfill') {
+        currentObject = FloodFill;
     }
     else if (object === 'rectangle') {
         currentObject = Rectangle;

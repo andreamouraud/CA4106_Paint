@@ -11,6 +11,7 @@ class Rectangle {
         this.name = "Rectangle";
     }
 
+    
     static open(canvas) {
         canvas.addEventListener('mousemove', this.mouseMoveListener);
         canvas.addEventListener('mousedown', this.mouseDownListener);

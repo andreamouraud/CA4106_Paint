@@ -14,6 +14,7 @@ canvas
 		margin-left: 60px;
 		margin-top: 3px;
 		background-color: white;
+		cursor: crosshair;
 }
 
 button
@@ -88,6 +89,15 @@ button:hover
 		border-right:1px solid white;
 }
 
+#size 
+{
+	position:relative;
+	left:50%;
+	right:50%;
+	width:10%;
+	margin-right:100px;
+}
+
 #tools button,input
 {
 		margin-left: 2px;
@@ -100,6 +110,7 @@ button:hover
 		float: left;
 		display: block;
 }
+
 
 .action-bar {
 	background-color: #eaeaea;
