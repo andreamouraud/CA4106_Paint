@@ -71,7 +71,8 @@ class Rectangle {
     }
 }
 ```  
-`Public and private field declarations are an experimental feature (stage 3) proposed at TC39, the JavaScript standards committee.`
+[Classes - JavaScript | MDN - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+> Public and private field declarations are an experimental feature (stage 3) proposed at TC39, the JavaScript standards committee.
 
 ### Deployment of the application
 ***
