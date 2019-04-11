@@ -9,6 +9,8 @@ The required tasks were :
 * Developing the application using JavaScript and HTML5.
 * Deploying it to [Google App Engine](https://cloud.google.com/appengine/)
 
+[*Click here to access our application*](https://ca4106wepaint.appspot.com/)
+
 ### Project process and team members
 ***
 
@@ -81,6 +83,8 @@ In order to deploy our application, we used [Static Website on Google App Engine
 During the deployment we faced some minors issues as the file structure is different than on a Local machine, but James fixed that quickly.  
 
 For example, if on the machine the path is `stylesheets/style` it would be `/stylesheets/style` for the deployment.
+
+The application is deployed [**here**](https://ca4106wepaint.appspot.com/)
 
 ### The Features of our application
 ***
