@@ -14,7 +14,7 @@ The required tasks were :
 
 The process of the project was very simple. We decided to separate the tasks, so everyone was doing something on the project.
 
-| Name          | ID        | Task                                 |
+| Name           | ID       | Task                                 |
 |----------------|:--------:|--------------------------------------|
 | Bronwyn Conroy | 15357066 | Deployment to GAE and video creation |
 | James Leahy    | 15464928 | Deployment to GAE and video creation |
@@ -26,7 +26,7 @@ The process of the project was very simple. We decided to separate the tasks, so
 When everyone was assigned to a task, the research of everyone was focused on their part.  
 * **Bronwyn** and **James** based their research around [Static Website on Google App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website).  
 * **Andrea** already knew the languages but used [Stackoverflow](https://stackoverflow.com/) when he had issues.
-* **Dylan** made some research about the [Markdown language](https://en.wikipedia.org/wiki/Markdown)  as Andrea told him that we were going to put the report on the website using a report made in markdown.
+* **Dylan** made some research about the [Markdown language](https://en.wikipedia.org/wiki/Markdown)  as Andrea told him that we were going to put the report on the website using a report made in Markdown.
 
 ### Development of the application
 ***
@@ -54,7 +54,7 @@ We used Git during the project to have a versioning of it, using a private repos
 ***
 As the only browser used during the development phase was Chrome, when the application was close to be finished, we decided to check if it was working on every other browser. 
 
-We were surprised as none of them but Chrome would work. After some research, we found out that Chrome was using a Javascript version that has not been released yet. Every other browser was still using the latest version and was waiting the next one to be officially released before using it but Chrome did not. So we came up with this major problem that has been solved after the testing phase.
+We were surprised as none of them but Chrome would work. After some research, we found out that Chrome was using a Javascript version that has not been released yet. Every other browser was still using the latest version and was waiting the next one to be officially released before using it. So we came up with this major problem that has been solved after the testing phase.
 
 *An example of one of the issues:* 
 
@@ -80,8 +80,7 @@ class Rectangle {
 In order to deploy our application, we used [Static Website on Google App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website).  
 During the deployment we faced some minors issues as the file structure is different than on a Local machine, but James fixed that quickly.  
 
-For example
-If on the machine the path is `stylesheets/style` it would be `/stylesheets/style` for the deployment.
+For example, if on the machine the path is `stylesheets/style` it would be `/stylesheets/style` for the deployment.
 
 ### The Features of our application
 ***
