@@ -85,8 +85,6 @@ If on the machine the path is `stylesheets/style` it would be `/stylesheets/styl
 
 ### The Features of our application
 ***
-Here is the list of all the features of our application:  
-
 
 | Feature                          | Required |
 |----------------------------------|:--------:|
