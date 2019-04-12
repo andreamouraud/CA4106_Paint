@@ -46,7 +46,7 @@ We used Git during the project to have a versioning of it, using a private repos
 |---------------|:--------------------:|
 | Android       | :heavy_check_mark:   |
 | Edge          | :heavy_check_mark:   |
-| IE            | :heavy_check_mark:   |
+| IE            | :x:                  |
 | Firefox       | :heavy_check_mark:   |
 | Opera         | :heavy_check_mark:   |
 | Safari        | :heavy_check_mark:   |
