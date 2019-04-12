@@ -785,7 +785,7 @@
             <li>Developing the application using JavaScript and HTML5.</li>
             <li>Deploying it to <a href="https://cloud.google.com/appengine/" rel="nofollow">Google App Engine</a></li>
             </ul>
-            <p><a href="https://ca4106wepaint.appspot.com/" rel="nofollow" target="_blank"><em>Click here to access our application</em></a></p>
+            <p><a href="https://ca4106wepaint.appspot.com/" rel="nofollow"><em>Click here to access our application</em></a></p>
             <h3><a id="user-content-project-process-and-team-members" class="anchor" aria-hidden="true" href="#project-process-and-team-members"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project process and team members</h3>
             <hr>
             <p>The process of the project was very simple. We decided to separate the tasks, so everyone was doing something on the project.</p>
@@ -879,11 +879,11 @@
             <p>We were surprised as none of them but Chrome would work. After some research, we found out that Chrome was using a Javascript version that has not been released yet. Every other browser was still using the latest version and was waiting the next one to be officially released before using it. So we came up with this major problem that has been solved after the testing phase.</p>
             <p><em>An example of one of the issues:</em></p>
             <p>Before</p>
-            <div class="highlight highlight-source-js"><pre><span class="pl-k">class</span> <span class="pl-en">Rectangle</span> {
+<div class="highlight highlight-source-js"><pre><span class="pl-k">class</span> <span class="pl-en">Rectangle</span> {
     name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Rectangle<span class="pl-pds">"</span></span>;
 }</pre></div>
             <p>After</p>
-            <div class="highlight highlight-source-js"><pre><span class="pl-k">class</span> <span class="pl-en">Rectangle</span> {
+<div class="highlight highlight-source-js"><pre><span class="pl-k">class</span> <span class="pl-en">Rectangle</span> {
     <span class="pl-en">constructor</span>() {
         <span class="pl-c1">this</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Rectangle<span class="pl-pds">"</span></span>;
     }
@@ -897,7 +897,7 @@
             <p>In order to deploy our application, we used <a href="https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website" rel="nofollow">Static Website on Google App Engine</a>.<br>
             During the deployment we faced some minors issues as the file structure is different than on a Local machine, but James fixed that quickly.</p>
             <p>For example, if on the machine the path is <code>stylesheets/style</code> it would be <code>/stylesheets/style</code> for the deployment.</p>
-            <p>The application is deployed <a href="https://ca4106wepaint.appspot.com/" rel="nofollow" target="_blank"><strong>here</strong></a></p>
+            <p>The application is deployed <a href="https://ca4106wepaint.appspot.com/" rel="nofollow"><strong>here</strong></a></p>
             <h3><a id="user-content-the-features-of-our-application" class="anchor" aria-hidden="true" href="#the-features-of-our-application"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Features of our application</h3>
             <hr>
             <table>
@@ -930,6 +930,18 @@
             </tr>
             <tr>
             <td>Delete layer</td>
+            <td align="center">-</td>
+            </tr>
+            <tr>
+            <td>Custom .paint file extension</td>
+            <td align="center">No</td>
+            </tr>
+            <tr>
+            <td>Save .paint files</td>
+            <td align="center">-</td>
+            </tr>
+            <tr>
+            <td>Load .paint files</td>
             <td align="center">-</td>
             </tr>
             <tr>
