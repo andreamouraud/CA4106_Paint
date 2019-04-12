@@ -97,6 +97,9 @@ The application is deployed [**here**](https://ca4106wepaint.appspot.com/)
 | Change layer position (up/down)  | -        |
 | Rename layer                     | -        |
 | Delete layer                     | -        |
+| Custom .paint file extension     | No       |
+| Save .paint files                | -        |
+| Load .paint files                | -        |
 | Clear Canvas                     | No       |
 | Fill Canvas                      | No       |
 | Flood Fill Algorithm             | No       |
