@@ -9,6 +9,7 @@ class Rectangle {
         this.size = size;
         this.fill = fill;
         this.name = "Rectangle";
+        this.type = "Rectangle";
     }
 
     

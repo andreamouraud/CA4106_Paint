@@ -9,6 +9,7 @@ class Circle {
         this.size = size;
         this.fill = fill;
         this.name = "Circle"
+        this.type = "Circle"
     }
 
     static open(canvas) {

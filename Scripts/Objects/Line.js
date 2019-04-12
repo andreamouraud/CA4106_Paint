@@ -6,6 +6,7 @@ class Line {
         this.color = color;
         this.size = size;
         this.name = "Line";
+        this.type = "Line";
     }
 
     addPoint(pointX, pointY) {
@@ -66,5 +67,11 @@ class Line {
             context.lineTo(this.path[i].pointX, this.path[i].pointY);
         }
         context.stroke();
+    }
+
+    setPath(jsonPath) {
+        for (var i = 0; i < jsonPath.length; i++) {
+            this.addPoint(jsonPath[i].pointX, jsonPath[i].pointY);
+        }
     }
 }

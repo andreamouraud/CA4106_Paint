@@ -4,6 +4,7 @@ class FloodFill {
         this.imageData = imageData;
         this.color = color;
         this.name = "Flood Fill";
+        this.type = "Flood Fill";
     }
 
     static open(canvas) {

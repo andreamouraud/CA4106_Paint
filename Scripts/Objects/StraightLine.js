@@ -8,6 +8,7 @@ class StraightLine {
         this.color = color;
         this.size = size;
         this.name = "Straight Line";
+        this.type = "Straight Line";
     }
 
     static open(canvas) {

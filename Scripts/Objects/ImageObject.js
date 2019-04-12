@@ -2,6 +2,7 @@ class ImageObject {
     constructor(data, width, height) {
         this.data = data;
         this.name = "Image";
+        this.type = "Image";
         this.width = width;
         this.height = height;
     }

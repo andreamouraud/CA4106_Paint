@@ -230,26 +230,89 @@ function exportImage() {
     }
   }
 
+function saveFile() {
+    var str = JSON.stringify(objects);
+	var blob = new Blob( [ str ], {
+	});
+	
+	var url = URL.createObjectURL( blob );
+	var link = document.createElement( 'a' );
+	link.setAttribute( 'href', url );
+	link.setAttribute( 'download', 'image.paint' );
+	var event = document.createEvent( 'MouseEvents' );
+	event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+	link.dispatchEvent( event );
+}
+
 function openFile(e) {
+    var isimg;
     var reader = new FileReader();
+    const filename = e.target.files[0].name;
     reader.onload = function(e){
-        var img = new Image();
-        img.onload = function(e) {
-            newWidth = img.naturalWidth;
-            newHeight = img.naturalHeight;
-            ratio = img.naturalWidth / img.naturalHeight;
-            if(newWidth > img.naturalHeight && newWidth > 1280) {
-                newWidth = 1280 / ratio;
+        console.log(isimg);
+        if (isimg == false) {
+            var jsonData = JSON.parse(e.target.result);
+            clearCanvas();
+            currentid = 0;
+            for (var i = 0; i < jsonData.length; i++) {
+                var object = getObject(jsonData[i].object);
+                if (object) {
+                    var currentobject = {id: jsonData[i].id, object: object}
+                    currentid = currentobject.id;
+                    addAction(currentobject);
+                    objects.push(currentobject);
+                }
             }
-            if(newWidth >= newHeight || newHeight > newWidth && newHeight > 720) {
-                newHeight = 720;
-                newWidth = 720 * ratio;
-            }
-            objects.push({id: currentid++, object:new ImageObject(img, newWidth, newHeight)});
-            addAction(objects[objects.length - 1]);
             drawObjects();
         }
-        img.src = e.target.result;
+        else {
+            isimg = true;
+            var img = new Image();
+            img.onload = function(e) {
+                newWidth = img.naturalWidth;
+                newHeight = img.naturalHeight;
+                ratio = img.naturalWidth / img.naturalHeight;
+                if(newWidth > img.naturalHeight && newWidth > 1280) {
+                    newWidth = 1280 / ratio;
+                }
+                if(newWidth >= newHeight || newHeight > newWidth && newHeight > 720) {
+                    newHeight = 720;
+                    newWidth = 720 * ratio;
+                }
+                objects.push({id: currentid++, object:new ImageObject(img, newWidth, newHeight)});
+                addAction(objects[objects.length - 1]);
+                drawObjects();
+            }
+            img.src = e.target.result;
+        }
     }
-    reader.readAsDataURL(e.target.files[0]); 
+    if (filename.split('.').pop() != 'paint') {
+        isimg = true;
+        reader.readAsDataURL(e.target.files[0]); 
+    }
+    else {
+        isimg = false;
+        reader.readAsText(e.target.files[0])
+    }
+}
+function getObject(jsonObject) {
+    console.log(jsonObject);
+    if (jsonObject.type == 'Straight Line')
+        return new StraightLine(jsonObject.startX, jsonObject.startY, jsonObject.endX, jsonObject.endY,jsonObject.color, jsonObject.size);
+    else if (jsonObject.type == 'Circle')
+        return new Circle(jsonObject.startX, jsonObject.startY, jsonObject.endX, jsonObject.endY,jsonObject.color, jsonObject.size, false);
+    else if (jsonObject.type == 'Rectangle')
+        return new Rectangle(jsonObject.startX, jsonObject.startY, jsonObject.endX, jsonObject.endY,jsonObject.color, jsonObject.size, false);
+    else if (jsonObject.type == 'Line') {
+        var line = new Line(jsonObject.startX, jsonObject.startY, jsonObject.color, jsonObject.size);
+        line.setPath(jsonObject.path);
+        return line;
+    }
+    else
+        return null;
+}
+
+function loadFile(e) {
+    console.log('iciici')
+    console.log(e);
 }
