@@ -1,6 +1,28 @@
 *{margin:0; padding: 0}
 
 
+.gotoreport {
+	padding: 8px 16px;
+	color: dodgerblue;
+	text-decoration: none;
+	border-radius: 2px;
+  border: 1px solid dodgerblue;
+	cursor: pointer;
+  border-radius: 20px;
+	margin-right: 85px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 12px;
+}
+
+.gotoreport:hover {
+	color: #c0c0c0;
+	background-color: dodgerblue;
+}
+
+
 section
 {
     padding-top: 1px;
