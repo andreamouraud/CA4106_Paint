@@ -23,6 +23,13 @@ The process of the project was very simple. We decided to separate the tasks, so
 | Dylan Da Costa | 18103235 | Report creation (Markdown language)  |
 | Andrea Mouraud | 18103154 | Application development              |
 
+
+### Video presentation
+***
+<video width="640" height="360" controls>
+  <source src="videos/presentation.mp4" type="video/mp4">
+</video>
+
 ### Research for the project
 ***
 When everyone was assigned to a task, the research of everyone was focused on their part.  
